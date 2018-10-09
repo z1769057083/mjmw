@@ -1,0 +1,136 @@
+html * {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  position: relative;
+  height: 100%;
+  line-height: 1;
+  overflow: hidden;
+  -webkit-text-size-adjust: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+body, p, dd, dl, form, h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+ul, ol, input, textarea {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a, s {
+  outline: 0 none;
+  text-decoration: none;
+}
+
+img {
+  border: 0 none;
+  vertical-align: top;
+}
+
+button, input {
+  outline: 0 none;
+  border-radius: 0;
+  border: 0 none;
+  appearance: none;
+}
+
+body, button, input, textarea {
+  font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif;
+}
+
+i, em {
+  font-style: normal;
+}
+
+b, h1, h2, h3, h4, h5 {
+  font-weight: normal;
+}
+
+textarea {
+  resize: none;
+  outline: 0 none;
+  overflow: auto;
+}
+
+/* 清浮动 */
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clear:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#app {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* 轮播图样式 */
+
+.swiper-container {
+  .swiper-slide {
+    .img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .swiper-pagination-bullet {
+    opacity: .2;
+    background: #fff;
+    &.swiper-pagination-bullet-active {
+      opacity: 1;
+    }
+  }
+}
+
+/* 去除详情页的最下方换行 */
+
+#has-br {
+  img {
+    display: block;
+    width: 100%;
+  }
+  br {
+    display: none;
+  }
+}
+
+/* 改变三级联运字体大小 */
+
+.picker-items {
+  background: #eee;
+  .picker-slot {
+    font-size: 14px;
+  }
+  .picker-item {
+    &.picker-selected {
+      color: #535353;
+    }
+  }
+  .picker-center-highlight {
+    &:after, &:before {
+      background: #fff;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+$fse5: #e5004f;
+$fs95: #959595;
+$fs43: #434343;
+$fs53: #535353;
+$fs55: #556fb5;
+$fs3d: #3d64e1;
+$fs44: #448aca;
+$fs1b: #1b1b1b;
+$fs31: #313131;
+$fs80: #80c269;
+$fs84: #84ccc9;
+$fs8c: #8c97cb;
+$fs1b: #1b1b1b;
+$fsb2: #b28850;
+$fsff: #fff;
+$bgff: #fff;
+$bg95: #959595;
+$bgec: #ecf0f3;
+$bge5: #e5004f;
+$bgfc: #fcbd37;
+$bgd1: #d1d4db;
+$bg88: #88abda;
+$bde3: #e3e3e3;
+$bde5: #e5004f;
+$bde6: #e6e6e6;
+$bd31: #313131;
+$bd95: #959595;
+$bdec: #ecf0f3;
+$bddc: #dcdcdc;
+$bdf0: #f0f0f0;
+$bdf8: #f8bbd0;
+$bsdc: #dcdfe2;
+$br6: 6px;
+$br10: 10px;
+$br15: 15px;
+$br20: 20px;
+$br24: 24px;
+$br50: 50px;
+
+.border {
+  position: relative;
+  margin-left: 5px;
+  padding: 0 6px;
+  font-size: 12px;
+  color: $fse5;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    border: 1px solid $bde5;
+    border-radius: 20px;
+    transform: scale(0.5);
+    transform-origin: left top;
+    box-sizing: border-box;
+  }
+}
+
+.dot {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin border-1px($color) {
+  position: relative;
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid $color;
+  }
+}
+
+@mixin bg($size: contain) {
+  background: no-repeat center;
+  background-size: $size;
+}

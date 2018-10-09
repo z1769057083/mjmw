@@ -1,0 +1,61 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot?2duppe');
+  src: url('../fonts/icomoon.eot?2duppe#iefix') format('embedded-opentype'),
+  url('../fonts/icomoon.ttf?2duppe') format('truetype'),
+  url('../fonts/icomoon.woff?2duppe') format('woff'),
+  url('../fonts/icomoon.svg?2duppe#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="ic_"], [class*=" ic_"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ic_pz:before {
+  content: "\e901";
+}
+
+.ic_mj:before {
+  content: "\e902";
+}
+
+.ic_zs:before {
+  content: "\e900";
+}
+
+.ic_gz:before {
+  content: "\e90e";
+}
+
+.ic_hg:before {
+  content: "\e910";
+}
+
+.ic_jb:before {
+  content: "\e911";
+}
+
+.ic_tp:before {
+  content: "\e912";
+}
+
+.ic_ly:before {
+  content: "\e913";
+}
+
+.ic_bb:before {
+  content: "\e914";
+}

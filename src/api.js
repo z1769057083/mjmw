@@ -1,0 +1,89 @@
+// api use part
+let host = (window.location.origin == 'http://vu.mjmw365.com') ? 'http://v2.mjmw365.com' : 'http://vt.mjmw365.com';
+let apiPath = host + '/Api';
+
+module.exports = {
+  warning: '网络开小差，请稍后再试',
+  wxUrl: window.location.href.split('#')[0], // 微信接口传url
+  wxPay: host + '/weixin/wxpay/buy/jsapi_th_v2.php?query=', // 微信支付返回跳转
+  wx: apiPath + '/wx/jssdk', // 获取微信配置相关信息
+  wxLogin: apiPath + '/wx/logo_wx', // 微信登录
+  payMoney: apiPath + '/wx/place', // 支付接口
+  upLoadHeadIcon: apiPath + '/wx/add_head_potrait', // 上传头像
+  addFridgePhoto: apiPath + '/wx/add_photo', // 添加冰箱屏照片
+  device: apiPath + '/Index/device', // 设备接口
+  homeData: apiPath + '/Index', // 首页接口
+  catData: apiPath + '/Index/category', // 分类接口
+  searchData: apiPath + '/Search/index', // 搜索主页接口
+  detailsData: apiPath + '/Index/item?itemid=', // 商品详情接口
+  searchResultData: apiPath + '/Search/search', // 搜索结果接口
+  userLoginData: apiPath + '/Member/signin', // 用户登录接口
+  userWXLogin: apiPath + '/Member/wx_signin', // 用户微信登录接口
+  wxLoginBDPhone: apiPath + '/Member/bind_mobile', // 微信登陆绑定手机号
+  userSignOut: apiPath + '/Member/signout', // 用户退出登录接口
+  userRegisterData: apiPath + '/Member/register', // 用户注册接口
+  forgetPassword: apiPath + '/Member/forget_password', // 忘记密码
+  resetPassword: apiPath + '/Member/reset_password', // 修改密码
+  bdPhoneSureMSM: apiPath + '/Member/bind_mobile_sms', // 修改绑定手机短信验证
+  bdPhoneSurePassword: apiPath + '/Member/bind_mobile_password', // 修改绑定手机密码验证
+  addAddress: apiPath + '/Member/add_address', // 增加地址接口
+  addressMember: apiPath + '/Member/address', // 地址列表接口
+  deleteAddress: apiPath + '/Member/del_address', // 删除地址接口
+  editAddress: apiPath + '/Member/edit_address', // 编辑地址接口
+  addOrder: apiPath + '/Order/place_v2', // 下订单接口
+  orderExpress: apiPath + '/Order/get_express_fee_v2', // 配送费接口
+  orderList: apiPath + '/Order/index', // 订单列表接口
+  orderDetails: apiPath + '/Order/get_by_id', // 订单详情接口
+  payOrder: apiPath + '/Order/pay_v2', // 订单支付接口
+  sureReceiveOrder: apiPath + '/Order/sign_for', // 确认收货
+  orderShadow: apiPath + '/Order/track_pack', // 订单跟踪
+  allOrderCount: apiPath + '/Order/summary', // 订单数汇总
+  addCollect: apiPath + '/Collection/add_goods', // 添加收藏品接口
+  deleteCollect: apiPath + '/Collection/del_goods', // 删除收藏品接口
+  collectList: apiPath + '/Collection/index', // 收藏品列表接口
+  commentCenter: apiPath + '/Item/comment_center', // 评价中心接口
+  commentList: apiPath + '/Item/comments', // 评价列表接口
+  addComment: apiPath + '/Item/add_comment', // 添加评价接口
+  saveCommentData: apiPath + '/Item/unsaved_comment', // 查看已保存评论接口
+  showCommentImage: apiPath + '/Item/comment_pic', // 晒图接口
+  scanFridgeLogin: apiPath + '/Member/scan_fridge', // 手机扫描冰箱屏二维码接口
+  fridgeScreenSet: apiPath + '/Album/screen_saver', // 冰箱屏屏保设置
+  fridgePhotoList: apiPath + '/Album/index', // 冰箱屏相册列表
+  deleteFridgePhoto: apiPath + '/Album/del_photo', // 删除冰箱屏照片
+  insetMJB: apiPath + '/Wallet/mjb_recharge', // 美家币充值接口
+  purseRecode: apiPath + '/Wallet/index', // 钱包交易记录接口
+  purseExpired: apiPath + '/Member/my_wallet', // 钱包余额接口
+  couponList: apiPath + '/Wallet/coupon', // 优惠券列表
+  recommentData: apiPath + '/Index/recommend', // 推荐商品
+  messageOrder: apiPath + '/Message/order', // 消息中心-物流消息
+  deleteOrderMsg: apiPath + '/Message/del_order_msg', // 消息中心-删除物流消息
+  brandList: apiPath + '/Search/brand', // 品牌列表
+  supplierList: apiPath + '/Index/supplier_list', // 供应商列表
+  keywordForBrand: apiPath + '/Search/brand_in_keyword', // 根据关键字获取品牌
+  keywordForSupplier: apiPath + '/Search/supplier_in_keyword', // 根据关键字获取供应商
+  supplierIDForSupplier: apiPath + '/Item/supplier_items', // 根据supplierID获取供应商商品列表
+  changeNickName: apiPath + '/Member/nickname', // 修改昵称接口
+  pushNotiSet: apiPath + '/Member/set_push', // 推送参数设置
+  productStorageData: apiPath + '/Item/storage', // 获取商品库存
+  getFridgeTemData: apiPath + '/Fridge/get_spec', // 获取冰箱设置数据
+  setFridgeTem: apiPath + '/Fridge/app_set_spec', // 设置冰箱
+  areaData: apiPath + '/member/area', // 全国省市区数据
+  getNearStore: apiPath + '/Store/in_area', // 根据经纬度获取附近小区店
+  wellChosenData: apiPath + '/index/choice', // 商城精选
+  setPayPass: apiPath + '/Member/set_pay_pass', // 设置支付密码
+  reSetPayPass: apiPath + '/Member/reset_pay_pass', // 重置支付密码
+  scanQRCode: apiPath + '/index/qr_scan', // 绑定小店/扫码识别
+  nonePayPass: apiPath + '/Member/pay_pass_on', // 免密支付开关
+  getFridgeID: apiPath + '/fridge/get_equipment_id', // 获取冰箱ID
+  getChannel: apiPath + '/Member/get_channel', // 查询用户充值渠道接口
+  getUUID: apiPath + '/Cart/get_guid', // 获取用户UUID接口
+  addItem: apiPath + '/Cart/add_item', // 购物车添加商品
+  getItem: apiPath + '/Cart/get_item_v2', // 获取购物车商品接口
+  delItem: apiPath + '/Cart/del_item', // 删除购物车商品接口
+  cleanup: apiPath + '/Cart/cleanup', // 清空购物车商品接口
+  proFile: apiPath + '/Member/profile', // 用户基本信息接口
+  cancelOrder: apiPath + '/Order/cancel', // 取消订单接口
+  historyOrder: apiPath + '/Order/goods', // 购物足迹接口
+  isPayPass: apiPath + '/Member/is_pay_pass', // 支付密码状态接口
+  cardExchange: apiPath + '/Card/exchange' // 支付密码状态接口
+};
